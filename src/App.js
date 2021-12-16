@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import AmandasThings from './pages/AmandasThings/AmandasThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -129,6 +130,14 @@ const App = () => {
     },
   ])
 
+  const [amandasThings, setAmandasThings] = useState([
+    {
+      name: "cats",
+      image: "https://www.thesprucepets.com/thmb/nNyzPMxOyf2Jc2yD7wy4YRGSCo0=/941x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/facts-about-black-cats-554102-hero-7281a22d75584d448290c359780c2ead.jpg",  
+      attributes: ["self cleaning", "fluffy", "warm", "playful", "sassy", "snuggly"],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -148,6 +157,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/amandas-things"
+        element={<AmandasThings things={amandasThings} />}
       />
     </Routes>
   )

@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import PetersThings from './pages/PetersThings/PetersThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -129,6 +130,21 @@ const App = () => {
     },
   ])
 
+  const [petersThings, setPetersThings] = useState([
+    {
+      name: 'evolution',
+      image:
+        'https://www.wilson.com/en-us/media/catalog/product/f/8/f8243e16-c915-49c3-ab3b-44f1f86d8da6_e6ovahzyanxli5jf.png?dpr=2&fit=bounds&orient=1&quality=70&optimize=medium&format=jpg&auto=webp&enable=upscale&width=706&height=863&canvas=1412%2C1726&bg-color=f5f5f5',
+      attributes: ['orange', 'bouncy', 'round', 'composite cover'],
+    },
+    {
+      name: 'whip',
+      image:
+        'https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/3-3-phantom-ewb/page-properties/rolls-royce-phantom-swb-discover-hero-d.jpg',
+      attributes: ['sleek', 'cool', 'expensive', 'fun'],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -148,6 +164,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/PetersThings"
+        element={<PetersThings things={petersThings} />}
       />
     </Routes>
   )

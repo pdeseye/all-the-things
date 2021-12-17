@@ -14,5 +14,5 @@ const PayalsThings = (props) => {
     </>
   )
 }
- 
+
 export default PayalsThings

@@ -14,5 +14,5 @@ import ThingCard from '../../components/ThingCard/ThingCard'
         </>
       )
     }
-     
+    
     export default AmandasThings

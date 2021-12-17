@@ -6,7 +6,9 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import PetersThings from './pages/PetersThings/PetersThings'
+import PayalsThings from './pages/PayalsThings/PayalsThings'
 import Landing from './pages/Landing/Landing'
+
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -144,6 +146,14 @@ const App = () => {
       attributes: ['sleek', 'cool', 'expensive', 'fun'],
     },
   ])
+  
+  const [payalsThings, setPayalsThings] = useState([
+    {
+      name: "Iris",
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fautonxt.net%2F2021-mazda-mazda3-2-5-turbo-review%2F&psig=AOvVaw0Hk_k4LQvBEzCDFVCr8Xjx&ust=1639760133082000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCODh6tfk6PQCFQAAAAAdAAAAABAD",  
+      attributes: ["zoomzoom", "speeddemon", "ladyInRed", "beautiful"],
+    },
+  ])
 
   return (
     <Routes>
@@ -168,6 +178,10 @@ const App = () => {
       <Route
         path="/PetersThings"
         element={<PetersThings things={petersThings} />}
+      />
+      <Route
+        path="/payalsThings"
+        element={<PayalsThings things={payalsThings} />}
       />
     </Routes>
   )
